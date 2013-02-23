@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  infinitiv: MyString
+  praesens: MyString
+  praeteritum: MyString
+  partizip_2: MyString
+  hilfs_verb: MyString
+  meaning: MyString
+
+two:
+  infinitiv: MyString
+  praesens: MyString
+  praeteritum: MyString
+  partizip_2: MyString
+  hilfs_verb: MyString
+  meaning: MyString

@@ -1,0 +1,15 @@
+h1 Big Text
+table.table.table-bordered.table-striped
+  thead
+    tr
+      th Infinitiv
+      th Präsens
+      th Perfekt
+      th Partizip 2
+  tbody
+    - @verbs.each do |verb|
+      tr
+        td= verb.infinitiv
+        td= verb.praesens
+        td= verb.praeteritum
+        td= verb.partizip_2
