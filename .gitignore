@@ -16,3 +16,6 @@
 
 # Ignore database settings
 /config/database.yml
+
+# Ignore precompiled assets
+/public/assets
