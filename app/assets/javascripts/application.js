@@ -14,5 +14,4 @@
 //= require jquery_ujs
 // Loads all Bootstrap javascripts
 //= require bootstrap
-//= require ga
 //= require_tree .
