@@ -2,6 +2,7 @@ Verbs::Application.routes.draw do
   root :to => 'verbs#index'
 
   match 'test' => 'verbs#test'
+  match 'check' => 'verbs#check'
 
   
   # The priority is based upon order of creation:

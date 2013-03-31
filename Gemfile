@@ -28,6 +28,7 @@ gem 'jquery-rails'
 
 gem 'slim-rails'
 gem 'google-analytics-rails'
+gem 'simple_form'
 
 group :production do
   gem 'pg'
