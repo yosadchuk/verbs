@@ -5,8 +5,8 @@ class VerbsController < ApplicationController
   end
 
   def test
-    @verb = Verb.find(rand(1..Verb.count))
-    #@verb = Verb.find(6)
+    #@verb = Verb.find(rand(1..Verb.count))
+    @verb = Verb.find(6)
   end
 
   def check
