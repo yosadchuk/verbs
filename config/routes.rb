@@ -1,8 +1,10 @@
 Verbs::Application.routes.draw do
   root :to => 'verbs#index'
 
-  match 'test' => 'verbs#test'
-  match 'check' => 'verbs#check'
+  match '/test' => 'verbs#test'
+  match '/check' => 'verbs#check'
+  # match '/check_verb/:verb_id' => 'verbs#check_verb'
+  match '/check_verb' => 'verbs#check_verb'
 
   
   # The priority is based upon order of creation:

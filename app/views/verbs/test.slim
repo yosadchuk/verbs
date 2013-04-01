@@ -1,14 +1,39 @@
 h1 TEST
 
 
-- if(flash[:notice])
-  .alert class="alert-#{flash[:notice]}"
-    button.close data-dismiss="alert" type="button" &times
-    = flash[:notice]
+/ - if(flash[:notice])
+/   .alert class="alert-#{flash[:notice]}"
+/     button.close data-dismiss="alert" type="button" &times
+/     = flash[:notice]
 
-= simple_form_for(@verb, :url => '/check', :html => {:class => 'form-inline'}) do |f|
+
+
+/ = simple_form_for(@verb, :url => '/check', :html => {:class => 'form-inline'}) do |f|
+/   = f.input :id, :as => :hidden
+/   = f.input :infinitiv
+/   = f.input :praeteritum, input_html: {value: nil}
+/   .form-actions
+/     = f.button :submit, class: 'btn btn-primary'
+
+
+
+= simple_form_for(@verb, :remote => true, :url => '/check_verb') do |f|
   = f.input :id, :as => :hidden
-  = f.input :infinitiv
-  = f.input :praeteritum, input_html: {value: nil}
-  .form-actions
-    = f.button :submit, class: 'btn btn-primary'
+  table.table
+    thead
+      tr
+        th Infinitiv
+        th Präteritum
+        th Partizip 2
+    tbody
+      tr
+        td = @verb.infinitiv
+        td = f.text_field :praeteritum, value: nil
+        td = f.text_field :partizip_2, value: nil
+        td = f.submit 'Check Verb', class: 'btn btn-primary'
+        
+        / td = content_tag :button, 'Check Verb', :type => 'button', :class => "check_link"
+
+
+  / .form-actions
+  /   = f.submit 'Check', class: 'btn btn-primary'
